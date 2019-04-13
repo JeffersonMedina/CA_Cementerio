@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Cementerio", "Control_Cementerio\Control_Cementerio.csproj", "{318146E2-D549-4AD4-A60F-705558D7CFDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A03C6C8A-CEC1-488A-B814-0608E1226A9A}
+	EndGlobalSection
+EndGlobal
