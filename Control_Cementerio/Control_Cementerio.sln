@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Cementerio", "Control_Cementerio\Control_Cementerio.csproj", "{318146E2-D549-4AD4-A60F-705558D7CFDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Control_Cementerio\Presentacion.csproj", "{318146E2-D549-4AD4-A60F-705558D7CFDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F6755A30-AE86-4C80-BD6C-E41157A8F18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{91C85EF1-AEF8-48ED-AD55-983FC7197508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{318146E2-D549-4AD4-A60F-705558D7CFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6755A30-AE86-4C80-BD6C-E41157A8F18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6755A30-AE86-4C80-BD6C-E41157A8F18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6755A30-AE86-4C80-BD6C-E41157A8F18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6755A30-AE86-4C80-BD6C-E41157A8F18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C85EF1-AEF8-48ED-AD55-983FC7197508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C85EF1-AEF8-48ED-AD55-983FC7197508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C85EF1-AEF8-48ED-AD55-983FC7197508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C85EF1-AEF8-48ED-AD55-983FC7197508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

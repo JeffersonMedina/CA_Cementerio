@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Domain;
 
 namespace Control_Cementerio
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -22,41 +23,6 @@ namespace Control_Cementerio
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnnd, int wmsg, int wparam, int lparam);
-        
-
-        private void txt_usuario_Enter(object sender, EventArgs e)
-        {
-            if (txt_usuario.Text == "Usuario")
-            {
-                txt_usuario.Text = "";
-            }
-        }
-
-        private void txt_usuario_Leave(object sender, EventArgs e)
-        {
-            if(txt_usuario.Text == "")
-            {
-                txt_usuario.Text = "Usuario";
-            }
-        }
-
-        private void txt_password_Enter(object sender, EventArgs e)
-        {
-            if(txt_password.Text == "Contraseña")
-            {
-                txt_password.Text = "";
-                txt_password.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txt_password_Leave(object sender, EventArgs e)
-        {
-            if(txt_password.Text == "")
-            {
-                txt_password.Text = "Contraseña";
-                txt_password.UseSystemPasswordChar = false;
-            }
-        }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
@@ -78,6 +44,35 @@ namespace Control_Cementerio
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            lbl_ErrorMessage.Visible = false;
+            if (txt_usuario.Text != "" && txt_password.Text != "")
+            {
+                UserModel user = new UserModel();
+                var validLogin = user.LoginUser(txt_usuario.Text, txt_password.Text);
+                if (validLogin == true)
+                {
+                    PrincipalForm mainMenu = new PrincipalForm();
+                    mainMenu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MsgError("Incorrecto Usuario o Contraseña.");
+                    txt_usuario.Clear();
+                    txt_password.Clear();
+                    txt_usuario.Focus();
+                }
+            }
+            else { MsgError("Ingrese nombre de Usuario."); }
+        }
+        private void MsgError(string msg)
+        {
+            lbl_ErrorMessage.Text = "         " + msg;
+            lbl_ErrorMessage.Visible = true;
         }
     }
 }
