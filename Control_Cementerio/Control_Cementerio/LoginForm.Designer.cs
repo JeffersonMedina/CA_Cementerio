@@ -74,7 +74,7 @@
             this.txt_usuario.Location = new System.Drawing.Point(313, 73);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(302, 26);
-            this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.TabIndex = 1;
             // 
             // txt_password
             // 
@@ -83,7 +83,7 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(302, 26);
-            this.txt_password.TabIndex = 3;
+            this.txt_password.TabIndex = 2;
             // 
             // lbl_Login
             // 
@@ -105,7 +105,7 @@
             this.btn_login.Location = new System.Drawing.Point(383, 192);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(173, 30);
-            this.btn_login.TabIndex = 1;
+            this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Acceder";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
@@ -122,6 +122,7 @@
             this.link_contraseña.TabIndex = 4;
             this.link_contraseña.TabStop = true;
             this.link_contraseña.Text = "¿Olvidó su Contraseña?";
+            this.link_contraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_contraseña_LinkClicked);
             // 
             // lbl_ErrorMessage
             // 
@@ -142,7 +143,7 @@
             // btn_minimizar
             // 
             this.btn_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.btn_minimizar.Image = global::Control_Cementerio.Properties.Resources.minimizar;
+            this.btn_minimizar.Image = global::Control_Cementerio.Properties.Resources.minimizar_ventana;
             this.btn_minimizar.Location = new System.Drawing.Point(708, 2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(32, 31);
@@ -154,7 +155,7 @@
             // btn_cerrar
             // 
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Image = global::Control_Cementerio.Properties.Resources.cerrar_ventana;
             this.btn_cerrar.Location = new System.Drawing.Point(746, 2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(32, 31);

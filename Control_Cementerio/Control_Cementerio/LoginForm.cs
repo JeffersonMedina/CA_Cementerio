@@ -57,6 +57,7 @@ namespace Control_Cementerio
                 {
                     PrincipalForm mainMenu = new PrincipalForm();
                     mainMenu.Show();
+                    mainMenu.FormClosed += logout;
                     this.Hide();
                 }
                 else
@@ -73,6 +74,20 @@ namespace Control_Cementerio
         {
             lbl_ErrorMessage.Text = "         " + msg;
             lbl_ErrorMessage.Visible = true;
+        }
+        private void logout(object sender, FormClosedEventArgs e)
+        {
+            txt_usuario.Clear();
+            txt_password.Clear();
+            lbl_ErrorMessage.Visible = false;
+            this.Show();
+            txt_usuario.Focus();
+        }
+
+        private void link_contraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarFrom recuperar = new RecuperarFrom();
+            recuperar.ShowDialog();
         }
     }
 }
