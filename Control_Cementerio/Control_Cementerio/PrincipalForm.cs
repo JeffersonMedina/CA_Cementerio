@@ -81,5 +81,24 @@ namespace Control_Cementerio
         {
             LoadData();
         }
+
+        private void Abrir_FormHijo(object formhijjo)
+        {
+            if(panel_contenedor.Controls.Count > 0)
+            {
+                this.panel_contenedor.Controls.RemoveAt(0);
+            }
+            Form fh = formhijjo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(fh);
+            this.panel_contenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void btn_arriendo_Click(object sender, EventArgs e)
+        {
+            Abrir_FormHijo(new ArriendoForm());
+        }
     }
 }

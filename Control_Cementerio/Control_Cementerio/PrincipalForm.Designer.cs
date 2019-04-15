@@ -37,13 +37,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
-            this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
+            this.btn_arriendo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_superior.SuspendLayout();
             this.panel_lateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,6 @@
             // 
             this.panel_superior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(218)))), ((int)(((byte)(156)))));
             this.panel_superior.Controls.Add(this.btn_minimizar);
-            this.panel_superior.Controls.Add(this.btn_maximizar);
             this.panel_superior.Controls.Add(this.btn_cerrar);
             this.panel_superior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_superior.Location = new System.Drawing.Point(0, 0);
@@ -63,6 +65,10 @@
             // panel_lateral
             // 
             this.panel_lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(121)))), ((int)(((byte)(78)))));
+            this.panel_lateral.Controls.Add(this.button4);
+            this.panel_lateral.Controls.Add(this.button3);
+            this.panel_lateral.Controls.Add(this.button2);
+            this.panel_lateral.Controls.Add(this.btn_arriendo);
             this.panel_lateral.Controls.Add(this.lbl_rol);
             this.panel_lateral.Controls.Add(this.lbl_email);
             this.panel_lateral.Controls.Add(this.lbl_nombre);
@@ -139,26 +145,13 @@
             this.btn_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(218)))), ((int)(((byte)(156)))));
             this.btn_minimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_minimizar.Image = global::Control_Cementerio.Properties.Resources.minimizar_ventana;
-            this.btn_minimizar.Location = new System.Drawing.Point(704, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(736, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(32, 30);
             this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_minimizar.TabIndex = 9;
             this.btn_minimizar.TabStop = false;
             this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
-            // btn_maximizar
-            // 
-            this.btn_maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(218)))), ((int)(((byte)(156)))));
-            this.btn_maximizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_maximizar.Image")));
-            this.btn_maximizar.Location = new System.Drawing.Point(736, 0);
-            this.btn_maximizar.Name = "btn_maximizar";
-            this.btn_maximizar.Size = new System.Drawing.Size(32, 30);
-            this.btn_maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_maximizar.TabIndex = 8;
-            this.btn_maximizar.TabStop = false;
-            this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
             // 
             // btn_cerrar
             // 
@@ -173,18 +166,67 @@
             this.btn_cerrar.TabStop = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // btn_arriendo
+            // 
+            this.btn_arriendo.FlatAppearance.BorderSize = 0;
+            this.btn_arriendo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_arriendo.Location = new System.Drawing.Point(0, 110);
+            this.btn_arriendo.Name = "btn_arriendo";
+            this.btn_arriendo.Size = new System.Drawing.Size(250, 35);
+            this.btn_arriendo.TabIndex = 5;
+            this.btn_arriendo.Text = "Arriendo";
+            this.btn_arriendo.UseVisualStyleBackColor = true;
+            this.btn_arriendo.Click += new System.EventHandler(this.btn_arriendo_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 151);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 35);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 192);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(250, 35);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 233);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(250, 35);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // panel_contenedor
+            // 
+            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_contenedor.Location = new System.Drawing.Point(250, 30);
+            this.panel_contenedor.Name = "panel_contenedor";
+            this.panel_contenedor.Size = new System.Drawing.Size(550, 420);
+            this.panel_contenedor.TabIndex = 2;
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel_lateral);
             this.Controls.Add(this.panel_superior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrincipalForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrincipalForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PrincipalForm_MouseDown);
             this.panel_superior.ResumeLayout(false);
@@ -192,7 +234,6 @@
             this.panel_lateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).EndInit();
             this.ResumeLayout(false);
 
@@ -203,12 +244,16 @@
         private System.Windows.Forms.Panel panel_superior;
         private System.Windows.Forms.Panel panel_lateral;
         private System.Windows.Forms.PictureBox btn_cerrar;
-        private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_rol;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_arriendo;
+        private System.Windows.Forms.Panel panel_contenedor;
     }
 }
