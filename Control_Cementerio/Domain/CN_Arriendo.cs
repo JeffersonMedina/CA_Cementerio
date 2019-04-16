@@ -12,13 +12,20 @@ namespace Domain
 {
     public class CN_Arriendo
     {
-        private CD_Arriendo obj_CD = new DataAccess.CD_Arriendo();
+        private CD_Listar obj_CD = new DataAccess.CD_Listar();
 
-        public DataTable Mostrar_Arriendo()
+        public DataTable Listar_Arriendo()
         {
             DataTable tabla_MA = new DataTable();
-            tabla_MA = obj_CD.Mostrar();
+            tabla_MA = obj_CD.Lista_Arriendo();
             return tabla_MA;
+        }
+
+        public DataTable Listar_Categoria()
+        {
+            DataTable tabla_MC = new DataTable();
+            tabla_MC = obj_CD.Lista_Categoria();
+            return tabla_MC;
         }
     }
 }

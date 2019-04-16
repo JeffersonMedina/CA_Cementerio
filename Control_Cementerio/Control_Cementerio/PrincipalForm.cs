@@ -29,9 +29,25 @@ namespace Control_Cementerio
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btn_restaurar_Click(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(1300,650);
+            this.Location = new Point(LX, LY);
+            btn_restaurar.Visible = false;
+            btn_maximizar.Visible = true;
+        }
+        int LX, LY;
         private void btn_maximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+            LX = this.Location.X;
+            LY = this.Location.Y;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btn_restaurar.Visible = true;
+            btn_maximizar.Visible = false;
+
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -72,7 +88,7 @@ namespace Control_Cementerio
 
         private void LoadData()
         {
-            lbl_nombre.Text = UserLoginCache.Nombre + "\n" + UserLoginCache.Apellido;
+            lbl_nombre.Text = UserLoginCache.Nombre + " " + UserLoginCache.Apellido;
             lbl_email.Text = UserLoginCache.Email;
             lbl_rol.Text = UserLoginCache.Rol;
         }
@@ -100,5 +116,20 @@ namespace Control_Cementerio
         {
             Abrir_FormHijo(new ArriendoForm());
         }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            if (panel_lateral.Width == 250)
+            {
+                panel_lateral.Width = 70;
+                btn_menu.Location = new Point(12, 9);
+            }
+            else
+            {
+                panel_lateral.Width = 250;
+                btn_menu.Location = new Point(199,9);
+            }
+        }
+
     }
 }

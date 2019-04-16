@@ -8,14 +8,24 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class CD_Arriendo:ConexionBD
+    public class CD_Listar:ConexionBD
     {
         
         MySqlDataReader leer;
         DataTable tabla_arriendo = new DataTable();
         MySqlCommand command = new MySqlCommand();
 
-        public DataTable Mostrar()
+        public DataTable Lista_Categoria()
+        {
+            command.Connection = Get_Conectar();
+            command.CommandText = "SELECT * FROM categoria;";
+            Abrir_Conexion();
+            leer = command.ExecuteReader();
+            tabla_arriendo.Load(leer);
+            Cerrar_Conexion();
+            return tabla_arriendo;
+        }
+        public DataTable Lista_Arriendo()
         {
             command.Connection = Get_Conectar();
             command.CommandText = "SELECT * FROM arriendo;";
