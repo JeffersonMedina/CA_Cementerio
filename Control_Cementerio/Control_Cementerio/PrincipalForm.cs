@@ -9,15 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
+using Domain;
 
 namespace Control_Cementerio
 {
     public partial class PrincipalForm : Form
     {
+        
         public PrincipalForm()
         {
             InitializeComponent();
+            obj_conf.GetConfApp();
         }
+
+
+        CNConf obj_conf = new CNConf();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

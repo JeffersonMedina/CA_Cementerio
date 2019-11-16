@@ -10,12 +10,12 @@ namespace DataAccess
 {
     public class CD_Listar:ConexionBD
     {
-        
+
         MySqlDataReader leer;
         DataTable tabla_arriendo = new DataTable();
         MySqlCommand command = new MySqlCommand();
 
-        public DataTable Lista_Categoria()
+        public DataTable Tabla_Categoria()
         {
             command.Connection = Get_Conectar();
             command.CommandText = "SELECT * FROM categoria;";
@@ -25,7 +25,7 @@ namespace DataAccess
             Cerrar_Conexion();
             return tabla_arriendo;
         }
-        public DataTable Lista_Arriendo()
+        public DataTable Tabla_Arriendo()
         {
             command.Connection = Get_Conectar();
             command.CommandText = "SELECT * FROM arriendo;";
